@@ -1,0 +1,19 @@
+To test your refinery engine:
+
+1. Add your engine to the Gemfile and bundle install:
+
+  gem 'refinerycms-page_likes', :path => '../refinerycms-page_likes'
+
+2. Add a profile to test your engine based on tags in config/cucumber.yml:
+
+  page_likes: --tags @page_likes <%= refinery_features.join(' ') %>
+
+3. Start Spork:
+
+  spork
+  spork cucumber
+
+5. Run your tests:
+
+  cucumber --profile page_likes
+  rspec ../refinerycms-page_likes
