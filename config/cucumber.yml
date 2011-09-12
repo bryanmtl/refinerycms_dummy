@@ -7,5 +7,5 @@ std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'progress'} --strict --tags ~@w
 refinery_features = (::Refinery::Plugins.registered.pathnames << Rails.root).map{|p| p.join('features')}.reject{|d| !d.directory?}
 %>
 default: <%= std_opts %> <%= refinery_features.join(' ') %>
-wip: --tags @wip:3 --wip features
+wip: --tags @wip:3 --wip <%= refinery_features.join(' ') %>
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
