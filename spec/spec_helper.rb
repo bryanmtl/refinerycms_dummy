@@ -37,7 +37,7 @@ def setup_environment
 end
 
 def each_run
-  require File.join(::Rails.root, 'features', 'support', 'factories')
+  require 'factories'
 end
 
 require 'rubygems'
