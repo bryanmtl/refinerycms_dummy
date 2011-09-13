@@ -1,5 +1,4 @@
 require 'rbconfig'
-require 'factory_girl'
 require File.expand_path('../support/refinery/controller_macros', __FILE__)
 
 def setup_environment
@@ -37,7 +36,6 @@ def setup_environment
 end
 
 def each_run
-  require 'factories'
 end
 
 require 'rubygems'
