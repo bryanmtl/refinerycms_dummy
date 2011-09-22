@@ -1,12 +1,10 @@
 To test your refinery engine:
 
-1. Add your engine to the Gemfile and bundle install:
+1. Create a new branch for your engine. This means you can test multiple engines in the same dummy app by switching branches. Of course you will probably want to move your engine outside of path of the dummy app, stored in it's own repo.
 
-  gem 'refinerycms-page_likes', :path => '../refinerycms-page_likes'
+2. Generate your engine in the normal manner and generate migrations.
 
-2. Add a profile to test your engine based on tags in config/cucumber.yml:
-
-  page_likes: --tags @page_likes <%= refinery_features.join(' ') %>
+    http://refinerycms.com/guides/creating-multiple-data-tables-in-a-single-engine
 
 3. Start Spork:
 
@@ -15,5 +13,5 @@ To test your refinery engine:
 
 5. Run your tests:
 
-  cucumber --profile page_likes
-  rspec ../refinerycms-page_likes
+  cucumber
+  rspec path/to/your/engine
