@@ -12,6 +12,10 @@ def setup_environment
   # in ./support/ and its subdirectories.
   Dir[File.expand_path('../support/**/*.rb', __FILE__)].each {|f| require f}
 
+  # Include factories from other plugins
+  refinery_factories = (::Refinery::Plugins.registered.pathnames << Rails.root).map{|p| p.join('features/support/factories.rb')}
+  refinery_factories.each { |factories| require factories if File.exists?(factories) }
+
   RSpec.configure do |config|
     # == Mock Framework
     #
