@@ -12,6 +12,6 @@ puts engine_path
 
 # Since rb-fsevent doesn't support symlinks, let's have a file we can touch to run them
 guard 'rspec', :version => 2, :spec_paths => ['spec', engine_path + '/spec'] do
-  watch('tmp/run_rspec.txt)  { engine_path + '/spec' }
+  watch('tmp/run_rspec.txt')  { engine_path + '/spec' }
 end
 
