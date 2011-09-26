@@ -11,7 +11,11 @@ To test your refinery engine:
   spork
   spork cucumber
 
-5. Run your tests:
+4. Run your tests:
 
   cucumber
   rspec path/to/your/engine
+
+5. Alternative you can replace spork and rspec startups with running:
+
+  guard
