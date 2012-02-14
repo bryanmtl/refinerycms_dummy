@@ -1,10 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'refinerycms',              '~> 1.0.8'
-
+gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git', :branch => '1-0-stable'
+gem 'rake', '0.9.2.2'
 group :development, :test do
-  # gem 'autotest'
-  # gem 'autotest-rails'
   gem 'growl'
   gem 'refinerycms-testing',    '~> 1.0.8'
   gem 'ruby-debug19', :require => 'ruby-debug'
