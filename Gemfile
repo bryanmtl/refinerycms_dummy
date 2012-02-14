@@ -3,8 +3,8 @@ source 'http://rubygems.org'
 gem 'refinerycms',              '~> 1.0.8'
 
 group :development, :test do
-  gem 'autotest'
-  gem 'autotest-rails'
+  # gem 'autotest'
+  # gem 'autotest-rails'
   gem 'growl'
   gem 'refinerycms-testing',    '~> 1.0.8'
   gem 'ruby-debug19', :require => 'ruby-debug'
